@@ -6,20 +6,33 @@ This project analyzes the Adult Income dataset to predict whether an individual 
 
 Dataset: https://www.kaggle.com/datasets/wenruliu/adult-income-dataset
 
-Data Cleaning and visualization: I performed a comprehensive Exploratory Data Analysis (EDA), starting with data cleaning to remove duplicates, and used .info() and .describe() to inspect the structure and summary statistics. checked on missing values and resolved inconsistencies, and removed redundant features. Once the data was refined, I utilized data visualization techniques to examine feature relationships and uncover key patterns, ensuring a high-quality dataset for production.
+ ### Data Cleaning and Visualization
+
+I performed a comprehensive Exploratory Data Analysis (EDA), starting with data cleaning to remove duplicates, and used .info() and .describe() to inspect the structure and summary statistics. checked on missing values and resolved inconsistencies, and removed redundant features. Once the data was refined, I utilized data visualization techniques to examine feature relationships and uncover key patterns, ensuring a high-quality dataset for production.
 
 Examples of visualized relationships:
 
 - 1- Visualizing the capital gain and capital loss columns separately.
-- 
+  
 <img width="1191" height="490" alt="Screen Shot 2026-03-02 at 4 12 00 PM" src="https://github.com/user-attachments/assets/f8d9a808-e85b-47b2-ac02-ccae8665d76a" />
 
-The boxplots of capital-gain and capital-loss reveal highly skewed distributions. In both features, the majority of individuals report a value of 0, indicating no investment-related gains or losses.However, a small subset of individuals shows extremely high values, resulting in significant outliers and long right tails.
+The boxplots of capital-gain and capital-loss reveal highly skewed distributions. In both features, the majority of individuals report a value of 0, indicating no investment-related gains or losses. However, a small subset of individuals shows extremely high values, resulting in significant outliers and long right tails.
 
 This pattern suggests that investment activity is rare but strongly concentrated among a limited group of individuals.
 
-- 2-# Visualizing the relationship between workclass feature and the income.
+- 2-Visualizing the relationship between workclass features and income.
 
    <img width="596" height="389" alt="Screen Shot 2026-03-02 at 4 29 26 PM" src="https://github.com/user-attachments/assets/5f3b946b-028e-43e8-88d0-21dfdcacbf5b" />
 
 The visualization shows that workclass influences income levels, with most categories dominated by individuals earning ≤50K. However, Self-emp-inc stands out, as it has a noticeably higher proportion of individuals earning >50K compared to other work classes.
+
+
+### Modeling Step
+
+- During the modeling phase, the dataset was split into train and test data, then the X_train data were separated into categorical and numerical features. Missing values were imputed, categorical features were encoded, and numerical features were scaled when appropriate. Separate preprocessing pipelines were created for each feature type and combined using a ColumnTransformer to ensure consistent and reproducible data preparation.
+
+- The preprocessed data were first trained using a RandomForestClassifier model. - The model achieves 98% accuracy on the training data, with very high precision and recall for both classes (F1-score ≈ 0.99 for ≤50K and 0.96 for >50K). However, performance drops on the test set to 83% accuracy, indicating some overfitting.
+-  On unseen data, the model performs well for the ≤50K class (F1-score = 0.89), but performance is weaker for the >50K class (F1-score = 0.63), with recall dropping to 0.58. This suggests the model is better at identifying lower-income individuals than correctly detecting higher-income cases,
+
+
+ 
