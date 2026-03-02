@@ -31,8 +31,15 @@ The visualization shows that workclass influences income levels, with most categ
 
 - During the modeling phase, the dataset was split into train and test data, then the X_train data were separated into categorical and numerical features. Missing values were imputed, categorical features were encoded, and numerical features were scaled when appropriate. Separate preprocessing pipelines were created for each feature type and combined using a ColumnTransformer to ensure consistent and reproducible data preparation.
 
-- The preprocessed data were first trained using a RandomForestClassifier model. - The model achieves 98% accuracy on the training data, with very high precision and recall for both classes (F1-score ≈ 0.99 for ≤50K and 0.96 for >50K). However, performance drops on the test set to 83% accuracy, indicating some overfitting.
--  On unseen data, the model performs well for the ≤50K class (F1-score = 0.89), but performance is weaker for the >50K class (F1-score = 0.63), with recall dropping to 0.58. This suggests the model is better at identifying lower-income individuals than correctly detecting higher-income cases,
+- The preprocessed data were first trained using a default RandomForestClassifier model.
+- The model achieves 98% accuracy on the training data, with very high precision and recall for both classes (F1-score ≈ 0.99 for ≤50K and 0.96 for >50K). However, performance drops on the test set to 83% accuracy, indicating some overfitting.
+- On unseen data, the model performs well for the ≤50K class (F1-score = 0.89), but performance is weaker for the >50K class (F1-score = 0.63), with recall dropping to 0.58. This suggests the model is better at identifying lower-income individuals than correctly detecting higher-income cases,
 
+#### Top important features 
 
+- Permutation importance was used to measure how much model performance decreases when each feature is shuffled. The top 10 features were extracted and visualized in a bar chart.
+
+<img width="505" height="347" alt="Screen Shot 2026-03-02 at 5 07 29 PM" src="https://github.com/user-attachments/assets/62962b07-ce76-43cf-a4bf-5040213242a4" />
+
+-  Feature importance aligns with economic intuition: capital-gain is the strongest predictor, reflecting the link between investment income and higher earnings, followed by capital-loss, marital-status, and education level, which all indicate financial stability and earning potential.
  
