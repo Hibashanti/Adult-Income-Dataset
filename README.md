@@ -42,4 +42,14 @@ The visualization shows that workclass influences income levels, with most categ
 <img width="505" height="347" alt="Screen Shot 2026-03-02 at 5 07 29 PM" src="https://github.com/user-attachments/assets/62962b07-ce76-43cf-a4bf-5040213242a4" />
 
 -  Feature importance aligns with economic intuition: capital-gain is the strongest predictor, reflecting the link between investment income and higher earnings, followed by capital-loss, marital-status, and education level, which all indicate financial stability and earning potential.
- 
+
+  - Example of the relationship between two of the most important features and the target
+
+   - The first graph visualizes the relationship between the target and the marital status, the graph shows that married individuales have a much higher probability of earning >50K compared to others.
+   
+<img width="795" height="491" alt="Screen Shot 2026-03-02 at 5 11 32 PM" src="https://github.com/user-attachments/assets/42346b4e-44c9-46b8-9ae9-aff9238af702" />
+
+  - The second graph visualizes the relationship between the target and the occupation, it shows that certain occupations, such as Exec-managerial, Prof-specialty, Protective-serv, Armed-Forces, have more income than the other jobs. The reason some occupations may have higher income than others is that they require higher education, specialized skills, and leadership roles, so higher salaries are expected. whereas the remaining jobs might be manual labor, entry-level, with lower skill requirements.
+    
+ <img width="990" height="606" alt="Screen Shot 2026-03-02 at 5 12 49 PM" src="https://github.com/user-attachments/assets/707c565d-ca4c-4168-a324-26b3a30d53f0" />
+
