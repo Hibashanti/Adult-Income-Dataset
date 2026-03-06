@@ -53,3 +53,6 @@ The visualization shows that workclass influences income levels, with most categ
     
  <img width="990" height="606" alt="Screen Shot 2026-03-02 at 5 12 49 PM" src="https://github.com/user-attachments/assets/707c565d-ca4c-4168-a324-26b3a30d53f0" />
 
+ #### Features Selection 
+ - We applied a feature engineering step to create additional meaningful features and then used an embedded method to select the most important ones for the model. The resulting Random Forest model showed that the training and test scores were very close, indicating that the model is not overfitting. However, to further improve performance and optimize predictive accuracy, we used GridSearchCV to tune the model’s hyperparameters, thereby enhancing overall effectiveness.
+
