@@ -58,3 +58,6 @@ The visualization shows that workclass influences income levels, with most categ
 
 - After applying feature engineering, embedded feature selection, and hyperparameter tuning with GridSearch, the model focused on more meaningful predictors while maintaining stable performance. Capital-related features remained the strongest indicators of income, with the engineered capital_total feature becoming the most influential variable. Other important predictors included family role, marital status, occupation, and education categories. Overall, the optimization steps helped the model reduce less informative features and improve its ability to identify the key factors associated with income classification without introducing overfitting.
 
+- <img width="1036" height="544" alt="image" src="https://github.com/user-attachments/assets/f3b3c0f6-af89-4e5e-a66f-0ebd3f91f2ff" />
+
+
