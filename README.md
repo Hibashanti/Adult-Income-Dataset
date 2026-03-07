@@ -61,3 +61,15 @@ The visualization shows that workclass influences income levels, with most categ
 - <img width="1036" height="544" alt="image" src="https://github.com/user-attachments/assets/f3b3c0f6-af89-4e5e-a66f-0ebd3f91f2ff" />
 
 
+
+# Neural Network Model
+
+A small feed-forward neural network was implemented to classify whether an individual's income exceeds $50K using the processed Adult Income dataset.
+
+The model was trained using the selected feature set (X_train_sel), which resulted from preprocessing, feature engineering, and feature selection steps. The neural network architecture consisted of one hidden layer with ReLU activation, followed by a sigmoid output layer suitable for the binary classification task.
+
+During training, the model was trained for up to 50 epochs with a validation split of 20%. To prevent overfitting, Early Stopping was applied with a patience of 5 epochs, monitoring validation accuracy and restoring the best model weights when training stopped.
+
+To further improve performance, hyperparameter tuning was performed using Keras Tuner. Several parameters were explored, including the number of hidden units, dropout rate, optimizer type, and learning rate. A dropout layer was added to reduce overfitting by randomly deactivating neurons during training.
+
+The best-performing model configuration identified by the tuner was then retrained and evaluated on unseen test data. Model performance was assessed using classification metrics, including precision, recall, F1-score, accuracy, and a confusion matrix, providing insights into the model's ability to correctly classify both income classes.
