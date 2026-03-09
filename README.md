@@ -73,3 +73,8 @@ During training, the model was trained for up to 50 epochs with a validation spl
 To further improve performance, hyperparameter tuning was performed using Keras Tuner. Several parameters were explored, including the number of hidden units, dropout rate, optimizer type, and learning rate. A dropout layer was added to reduce overfitting by randomly deactivating neurons during training.
 
 The best-performing model configuration identified by the tuner was then retrained and evaluated on unseen test data. Model performance was assessed using classification metrics, including precision, recall, F1-score, accuracy, and a confusion matrix, providing insights into the model's ability to correctly classify both income classes.
+
+
+- Conclusion
+
+This project developed machine learning models to predict whether an individual's income exceeds $50K using the Adult Income dataset. After applying data preprocessing, feature engineering, and feature selection, two models were implemented: Random Forest and a Neural Network. Hyperparameter tuning was performed to improve the neural network’s performance by optimizing the number of hidden units, dropout rate, optimizer, and learning rate. The results show that both models achieved a predictive performance, with Random Forest slightly outperforming the neural network. The analysis also highlighted the importance of financial and demographic factors such as capital gain, education level, and marital status in determining income levels. Overall, the project demonstrates how machine learning techniques can be applied to extract meaningful insights and support data-driven decision-making.
